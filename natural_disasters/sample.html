@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oxygen+Mono&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="styles1.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.0/dist/umd/popper.min.js"
+        integrity="sha384-SWt7mFJUSt+OsCMMCxWigS2Q5hWp05yK5HQQz16e/zyz3nQYmb6tL8+2+GfRgOsT"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+
+    <title>Travistar</title>
+</head>
+
+<body>
+    <!--Navbar Start-->
+    <header>
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
+            <a class="navbar-brand nomono" href="#"><strong>Travistar</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="natural_disasters/map.html">Natural Disasters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <!--Navbar end-->
+
+    <main>
+        <h1>Natural Disasters Data Explorer</h1>
+        <h2>Decadal Average: Impact by
+            <select id="impactSelector">
+                <option value="Number of deaths from disasters" selected>Number of deaths</option>
+                <option value="Number of people injured from disasters">Number of people injured</option>
+                <option value="Number of total people affected by disasters">Total people affected</option>
+                <option value="Number of people left homeless from disasters">People left homeless</option>
+                <option value="Total economic damages from disasters as a share of GDP">Economic damages (as % of GDP)
+                </option>
+            </select>
+            <span id="currentYear">(Year)</span>
+        </h2>
+        <p id="description">Disasters include all geophysical, meteorological and climate events including earthquakes,
+            volcanic activity, landslides, drought, wildfires, storms, and flooding. Decadal figures are measured as the
+            annual average over the subsequent ten-year period.</p>
+        <label for="yearInput">Enter Decade:</label>
+        <input type="text" id="yearInput" placeholder="Enter a decade">
+        <button id="updateChartButton">Update Chart</button>
+        <button id="timeLapseButton">Play Time-Lapse</button>
+        <div id="regions_div" style="width: 900px; height: 500px;"></div>
+        <div id="legend"></div>
+
+        <!-- Load Javascript -->
+        <script src="main.js"></script>
+    </main>
+    <footer>
+        <p>
+            Designed and coded by
+            <a href="https://github.com/Tumekab" target="_blank">Tumeka</a><span>✌🏼</span>
+        </p>
+    </footer>
+</body>
+
+</html>

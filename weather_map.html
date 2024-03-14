@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    <script>
+        var map = L.map('map').setView([50.1109, 8.6821], 5);  // Coordinates for central Europe
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var weatherLayer = L.tileLayer('https://tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png?appid=7e6ca0b8d067429e944a212d20946f9a', {
+            maxZoom: 19,
+            attribution: '© OpenWeatherMap'
+        }).addTo(map);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #37718e;
+    /* Adjust the color to fit your design */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #eae6e2;
+    /* This sets the text color */
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: #d0cd8f;
+    /* Color on hover */
+}
